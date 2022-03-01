@@ -69,7 +69,7 @@ const setWordsCounter = (operation = 'initial') => {
   }
 
   if (operation === 'initial') {
-    wordsCounter = 1;
+    wordsCounter = 10;
   }
 
   wordsText.innerText = `${wordsCounter}`;
@@ -151,12 +151,6 @@ const noLivesLeft = () => {
   gameOverContainer.classList.remove('hidden');
 };
 
-const allWordsGuessed = () => {
-  if (wordsCounter !== 0) return;
-
-  modalReveal();
-};
-
 const modalReveal = () => {
   modal.classList.remove('hidden');
 };
@@ -207,11 +201,12 @@ alphabetContainer.addEventListener('click', (e) => {
     if (isAllBoxesFilled()) {
       disableAlphabetButtons();
 
+      setWordsCounter('decrement');
+      if (wordsCounter === 0) return modalReveal();
+
       setTimeout(() => {
         state = removeWordFromCategory(state);
         getWordFromCategory(state);
-        setWordsCounter('decrement');
-        allWordsGuessed();
         enableAlphabetButtons();
         setLivesCounter();
       }, 1500);
