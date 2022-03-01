@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangmanium // Quick And Fun Hangman Game</title>
+
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Source+Serif+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header container text-center">
+      <a class="logo" href="index.html">
+        <img
+          src="./img/logo.svg"
+          alt="quick and fun hangman game"
+          draggable="false"
+        />
+      </a>
+      <h1 class="title">Just choose a category below and start playing!</h1>
+    </header>
+    <main class="container text-center">
+      <div class="categoty-buttons">
+        <button class="btn btn--category" data-category="animals">
+          <ion-icon name="paw-outline" class="ion"></ion-icon>Animals
+        </button>
+        <button class="btn btn--category" data-category="countries">
+          <ion-icon name="business-outline" class="ion"></ion-icon>Countries
+        </button>
+        <button class="btn btn--category" data-category="sports">
+          <ion-icon name="basketball-outline" class="ion ion--sports"></ion-icon
+          >Sports
+        </button>
+        <button class="btn btn--category" data-category="cars">
+          <ion-icon name="car-outline" class="ion ion--cars"></ion-icon>Cars
+        </button>
+      </div>
+      <div class="guess-word-boxes"></div>
+      <div class="break"></div>
+      <div class="alphabet">
+        <!-- <div class="alphabet__one"></div>
+          <div class="alphabet__two"></div> -->
+      </div>
+
+      <div class="stats hidden">
+        <p class="stats__lives">
+          <ion-icon name="heart" class="ion"></ion-icon>Your lives:
+          <span class="lives-num"></span>
+        </p>
+
+        <p class="stats__words">
+          <ion-icon name="book" class="ion"></ion-icon>Words Left:
+          <span class="words-num"></span>
+        </p>
+      </div>
+
+      <div class="game-over my-3 hidden">
+        <h2 class="game-over__text">
+          <ion-icon name="heart-dislike" class="ion"></ion-icon>Game Over!
+        </h2>
+        <button class="btn btn--game-over">
+          <ion-icon name="flash" class="ion"></ion-icon>Try Again
+        </button>
+      </div>
+
+      <div class="hangman">
+        <div class="hangman__ground hidden"></div>
+        <div class="hangman__board--1 hidden"></div>
+        <div class="hangman__board--2 hidden"></div>
+        <div class="hangman__rope hidden"></div>
+        <div class="hangman__head hidden"></div>
+        <div class="hangman__torso hidden"></div>
+        <div class="hangman__hand--right hidden"></div>
+        <div class="hangman__hand--left hidden"></div>
+        <div class="hangman__leg--right hidden"></div>
+        <div class="hangman__leg--left hidden"></div>
+      </div>
+    </main>
+
+    <div class="modal text-center hidden">
+      <div class="modal__content">
+        <button class="modal__close">X</button>
+        <h2 class="modal__title">🎊 You Won! 🎊</h2>
+        <p class="modal__text">
+          Congratulations, you have guessed all the words in this category!
+        </p>
+        <button class="btn btn--modal">
+          <ion-icon name="rocket" class="ion"></ion-icon>Go Again
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
