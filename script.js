@@ -176,7 +176,6 @@ categoryButtonsContainer.addEventListener('click', (e) => {
   if (this.innerWidth <= 576) {
     guessWordBoxesContainer.scrollIntoView({
       behavior: 'smooth',
-      block: 'end',
     });
   }
 
