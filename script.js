@@ -173,6 +173,10 @@ categoryButtonsContainer.addEventListener('click', (e) => {
     .forEach((btn) => btn.classList.remove('selected'));
   button.classList.add('selected');
 
+  if (this.innerWidth <= 576) {
+    guessWordBoxesContainer.scrollIntoView({ behavior: 'smooth' });
+  }
+
   currCategory = button.dataset.category;
 
   getCategory();
