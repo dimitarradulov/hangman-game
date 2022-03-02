@@ -8,4 +8,4 @@ Choose a category and try to guess the generated word from that category. If you
 
 ## Quick Preview
 You can check out the app here:
-[Hangmanium](http://hangmanium.netlify.app "Hangmanium - Hangman Game")
+[Hangmanium](http://hangmanium.netlify.app "Hangmanium - Hangman Game"){:target="_blank"}
