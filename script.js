@@ -176,6 +176,9 @@ categoryButtonsContainer.addEventListener('click', (e) => {
   currCategory = button.dataset.category;
 
   getCategory();
+
+  if (!gameOverContainer.classList.contains('hidden'))
+    gameOverContainer.classList.add('hidden');
 });
 
 alphabetContainer.addEventListener('click', (e) => {
