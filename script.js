@@ -104,7 +104,7 @@ const createWordBoxes = () => {
 };
 
 const getWordFromCategory = (oldState) => {
-  const randomNum = randomInt(0, 9);
+  const randomNum = randomInt(0, oldState[currCategory].length - 1);
 
   randomWord = oldState[currCategory][randomNum].toUpperCase();
 
@@ -194,7 +194,6 @@ alphabetContainer.addEventListener('click', (e) => {
   button.disabled = true;
 
   const letter = button.innerText;
-  console.log(letter, randomWord);
 
   if (randomWord.includes(letter)) {
     randomWord.split('').forEach((x, i) => {
