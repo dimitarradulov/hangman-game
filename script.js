@@ -9,11 +9,7 @@ const alphabetContainer = document.querySelector('.alphabet');
 const hangamanFigureContainer = document.querySelector('.hangman');
 const gameOverContainer = document.querySelector('.game-over');
 
-let livesCounter;
-let wordsCounter;
-let randomWord;
-let currCategory;
-let state;
+let livesCounter, wordsCounter, randomWord, currCategory, state;
 
 const categories = {
   // prettier-ignore
